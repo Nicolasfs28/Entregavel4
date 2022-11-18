@@ -18,4 +18,3 @@ function contagem(inteiros){
 }
 module.exports=contagem
 
-"teste"
