@@ -1,3 +1,4 @@
+const readline = require('readline');
 
     var n = parseInt(prompt("Informe um numero de termos da sequência"))
     var termo1=0

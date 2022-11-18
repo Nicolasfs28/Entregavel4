@@ -1,3 +1,4 @@
+const readline = require('readline');
 
     var vetor=[]
     var aux=0

@@ -1,3 +1,4 @@
+const readline = require('readline');
 
     var n=parseInt(prompt('informe um numero'))
     var fatorial=1

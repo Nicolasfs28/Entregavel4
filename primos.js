@@ -1,3 +1,4 @@
+const readline = require('readline');
 
     var numPrimo
     var numDivisores=0

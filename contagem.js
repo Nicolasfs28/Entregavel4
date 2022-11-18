@@ -1,20 +1,13 @@
-function contagem(inteiros){
-    var n,contador, i, inteiro
-
-    contador=0
-    i=0
-
-    n=parseInt(prompt("Informe a quantidade de números que deseja testar"))
-    while(i<n){
-        inteiro=Number(prompt())
-        if(Number.isInteger(inteiro)){
-            contador++
-        }
-        i++
+function contagem(numeros){
+    var contagem = 0;
+    for( i=0; i<numeros.length; i++) {
+        var num = numeros[i];
+        var parte_fracao = parseInt(Math.round((num - parseInt(num)) * 100));
+        if(parte_fracao == 0){
+            contagem++;
+        }        
     }
-    document.write("A quantidade de números inteiros é: "+ contador)
-
-
+    return "Contagem dos números inteiros: " + contagem;
 }
-module.exports=contagem
 
+module.exports = contagem;
