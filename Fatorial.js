@@ -1,11 +1,11 @@
-const readline = require('readline');
+function fatorial(i){
 
-    var n=parseInt(prompt('informe um numero'))
-    var fatorial=1
-    var i=n
+    
+    var fatorial = 1 ;
+    var i
     while(i>=1){
         fatorial=fatorial*i
         i=i-1
     }
-    document.write("O fatorial de "+ n + " é "+ fatorial)
-
+}
+module.exports = fatorial;

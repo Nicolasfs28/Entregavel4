@@ -1,11 +1,10 @@
 
-    var n= prompt("Informe a quantidade de números")
-    var numero
-    var soma=0
-    var i=0
-     while(i<n){
-        numero=parseInt(prompt("Informe um número"))
-        soma=soma+numero
-        i++
-     }
-     document.write("A soma dos " + n + " número é " + soma)
+    function somatorio(numeros){
+    var soma = 0;
+    for( i=0; i<numeros.length; i++) {
+        soma = soma + numeros[i];
+    }
+    return "Somatório: " + soma;
+}
+
+module.exports = somatorio;

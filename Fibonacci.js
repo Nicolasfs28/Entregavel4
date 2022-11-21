@@ -1,15 +1,20 @@
-const readline = require('readline');
 
-    var n = parseInt(prompt("Informe um numero de termos da sequência"))
-    var termo1=0
-    var termo2=1
-    var termo3
-    
-    document.write(termo1+ ", "+termo2)
-    for (var i=3; i<=n; i++){
-        termo3=termo1+termo2
-        document.write(", "+termo3)
-        termo1=termo2
-        termo2=termo3
+function fibonacci(fibo){
+    let anter = 0;
+    let atu = 1;
+    let result = "0, ";
+
+    for(let i = 1; i < fibo; i++){
+      if(i == fibo - 1){
+        result += atu + ".";
+      }else{
+        result += atu + ", ";
+      }
+      let aux = atu;
+      atu = anter + aux;
+      anter = aux;
     }
+    return result;
+}
 
+module.exports = fibonacci;

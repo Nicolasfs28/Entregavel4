@@ -1,20 +1,19 @@
-const readline = require('readline');
+function ordenacao(vetor, i) {
+  
+    if (vetor.length <= 1){
+    return vetor;
+  }
 
-    var vetor=[]
-    var aux=0
+  var aux = vetor[0];
+  var j = []; 
+  var c = [];
 
-    vetor = prompt("digite numeros separados por espaço").split(" ").map(Number)
+  for (var i = 1; i < vetor.length; i++) {
+    vetor[i] < aux ? j.push(vetor[i]) : c.push(vetor[i]);
+  } return ordenacao(j).concat(aux, ordenacao(c));
 
-    for(var j=0; j<vetor.length; j++){
-        for(var c=0; c<vetor.length;c++){
-            if(vetor[j]<vetor[c]){
-                aux=vetor[j]
-                vetor[j]=vetor[c]
-                vetor[c]=aux
-            }
-        }
-    }
-    for(var i=0; i<vetor.length;i++){
-        console.log(vetor[i]+" ")
-    }
+};
 
+
+
+module.exports = ordenacao;
